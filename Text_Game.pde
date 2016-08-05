@@ -10,6 +10,9 @@ void setup(){
 void draw(){
   
   if(state == 0){
+  println("  ");
+  println("  ");
+  println("  ");
   println("Are you a tyrannosaurus rex?");
   println("A. Yes.");
   println("B. No.");
@@ -37,7 +40,7 @@ void keyPressed(){
        println("Dolphins are cool...");
        println("Well, which geologic period would you like to say you were born in?");
        println("A. Jurassic, of course.");
-       println("B. Dolphins period, because dolphins are the best.");
+       println("B. ...I don't know... Cretaceous maybe?");
        state = 4;
       }  else if (state == 4){
          println("  ");
@@ -49,6 +52,9 @@ void keyPressed(){
         }  else if (state == 5){
            println("  ");
            println("Well, okay. Good bye and have a nice day, sir.");
+           println("  ");
+           println("  ");
+           println("Press Q to play again.");
            state = 6;
         
     }
@@ -83,7 +89,15 @@ void keyPressed(){
         }  else if (state == 5){
            println("  ");
            println("...alright I really need to go now. Bye.");
+           println("  ");
+           println("  ");
+           println("Press Q to play again.");
            state = 6;
         }
   }
+    if(key =='Q' || key == 'q'){
+    if(state == 6){
+    state=0;  
+    }
+    }
 }
