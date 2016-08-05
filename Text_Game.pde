@@ -1,13 +1,23 @@
+PImage img;
+import ddf.minim.*;
+Minim minim;
+AudioPlayer player;
+
 int state;
 
 void setup(){
 
-  size(100,100);
+  size(350,350);
   background(255);
+  img = loadImage("t-rex.jpg");
+  minim = new Minim(this);
+  player = minim.loadFile("daydream.mp3");
+  player.loop();
   state = 0;
 }
 
 void draw(){
+  image(img, 20, 20);
   
   if(state == 0){
   println("  ");
@@ -69,6 +79,7 @@ void keyPressed(){
     println("B. No I don't");
     state = 2;
     } else if (state == 2){
+      img = loadImage("dolphin1.jpg");
       println("  ");
       println("I beleve you might be a dolphin, sir.");
       println("A. I should've taken T-rex when I had the chance.");
@@ -81,6 +92,7 @@ void keyPressed(){
        println("B. No.");
        state = 4;
       }  else if (state == 4){
+         img = loadImage("dolphin2.jpg");
          println("  ");
          println("Really? you really like dolphins, don't you?");
          println("A. Yes.");
