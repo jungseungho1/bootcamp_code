@@ -37,7 +37,7 @@ void keyPressed(){
        println("Dolphins are cool...");
        println("Well, which geologic period would you like to say you were born in?");
        println("A. Jurassic, of course.");
-       println("B. ...I don't know... Cretaceous maybe?");
+       println("B. Dolphins period, because dolphins are the best.");
        state = 4;
       }  else if (state == 4){
          println("  ");
